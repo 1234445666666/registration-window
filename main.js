@@ -64,8 +64,8 @@ btnUsers.addEventListener('click', () => {
         document.querySelector('.registration').style.display = 'none';
         document.querySelector('.password').style.display = 'none';
         document.querySelector('.users__base').style.display = 'flex';
-        userLogin.textContent = 'Логин: ' + userOpenLogin.value + ' Пароль: ' + userOpenPassword.value;
-    usersList.append(userLogin, userPassword);
+        userLogin.textContent = `Пользователь ${userOpenLogin.value} :` + 'Логин: ' + userOpenLogin.value + ' Пароль: ' + userOpenPassword.value;
+        usersList.append(userLogin, userPassword);
     }
     else {
         alert('Чтобы посмотреть введите ваш логин и пароль');
