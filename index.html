@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style/style.css" />
-</head>
+  <body>
+    <div class="registration">
+      <h1>Регистрация</h1>
+      <input type="text" id="enterLogin" placeholder="введите ваш логин" />
+      <input type="text" id="enterPassword" placeholder="введите ваш пароль" />
+      <button class="registration__btn" value="Click">
+        Зарегистрироваться
+      </button>
+    </div>
 
-<body>
-  <div class="back">
-    <button id="btnBack">Вернуться назад</button>
-    <div>
-      <div class="registration">
-        <h1>Регистрация</h1>
-        <input type="text" id="enterLogin" placeholder="введите ваш логин" />
-        <input type="text" id="enterPassword" placeholder="введите ваш пароль" />
-        <button class="registration__btn" value='Click'>Зарегистрироваться</button>
-      </div>
-
-      <div class="password" style="display: none;">
-        <h1>Проверка данных пользователя</h1>
-        <input type="text" id="enterPassword" placeholder="введите ваш логин" />
-        <input type="password" id="checkPassword" placeholder="введите пароль" />
-        <a href="#" class="password__control">показать пароль</a>
-        <button id="btn__check">Проверить</button>
-      </div>
-</body>
-<script src="main.js"></script>
-
+    <div class="password" style="display: none">
+      <h1>Проверка данных пользователя</h1>
+      <input type="text" id="checkLogin" placeholder="введите ваш логин" />
+      <input type="password" id="checkPassword" placeholder="введите пароль" />
+      <a href="#" class="password__control">показать пароль</a>
+      <button id="btn__check">Проверить</button>
+      <button id="btnBack">Вернуться назад</button>
+      <button id="btnUsers">Показать пользователей</button>
+    </div>
+    <div class="users__base" style="display: none">
+      <h1>Пользователи и их пароли</h1>
+      <ol id="users__list">
+        <!-- <li>логины и пароли пользователей</li> -->
+      </ol>
+      <button id="btnBack2">Вернуться назад</button>
+    </div>
+  </body>
+  <script src="main.js"></script>
 </html>

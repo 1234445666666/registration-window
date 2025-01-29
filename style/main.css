@@ -106,7 +106,7 @@ input {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  margin: 0 auto;   
+  margin: 0 auto;
 
   &:hover {
     background-color: black;
@@ -114,8 +114,87 @@ input {
   }
 }
 
+.users__base {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#btnUsers {
+  width: 240px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+#btnBack2 {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.users__list {
+  list-style-type: none;
+}
+
+.users__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
 @media (max-width: 600px) {
   .password {
+    width: 100%;
+    height: 100%;
+  }
+
+  .users__base {
     width: 100%;
     height: 100%;
   }
@@ -126,10 +205,20 @@ input {
     width: 100%;
     height: 100%;
   }
+
+  .password {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media (max-width: 300px) {
   .password {
+    width: 100%;
+    height: 100%;
+  }
+
+  .users__base {
     width: 100%;
     height: 100%;
   }
