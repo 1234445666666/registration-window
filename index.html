@@ -11,7 +11,7 @@
     <div class="registration">
       <h1>Регистрация</h1>
       <input type="text" id="enterLogin" placeholder="введите ваш логин" />
-      <input type="text" id="enterPassword" placeholder="введите ваш пароль" />
+      <input type="password" id="enterPassword" placeholder="введите ваш пароль" />
       <button class="registration__btn" value="Click">
         Зарегистрироваться
       </button>
@@ -22,7 +22,7 @@
       <input type="text" id="checkLogin" placeholder="введите ваш логин" />
       <input type="password" id="checkPassword" placeholder="введите пароль" />
       <a href="#" class="password__control">показать пароль</a>
-      <button id="btn__check">Проверить</button>
+      <button id="btn__check">Войти в to do list</button>
       <button id="btnBack">Вернуться назад</button>
       <button id="btnUsers">Показать пользователей</button>
     </div>
@@ -33,6 +33,20 @@
       </ol>
       <button id="btnBack2">Вернуться назад</button>
     </div>
+    <div class="to__do" style="display: none">
+      <h1>to do list</h1>
+      <input type="text" id="to__do" placeholder="введите задачу" />
+      <div class="buttons__to__do">
+        <button id="add__to__do">Добавить задачу</button>
+        <button id="remove__to__do">Удалить задачу</button>
+        <button id="remove__all__to__do">Удалить все задачи</button>
+      </div>
+      <ol id="to__do__list">
+        <!-- <li>задачи</li> -->
+      </ol>
+      <button id="btnBack3">Вернуться назад</button>
+    </div>
   </body>
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/to-do.js"></script>
 </html>

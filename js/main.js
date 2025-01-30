@@ -7,7 +7,10 @@ const userOpenLogin = document.getElementById('enterLogin');
 
 button.addEventListener('click', () => {
     if (userOpenPassword.value === userCheckpassword.value && userOpenLogin.value === userCheckLogin.value) {
-        alert('Правильный логин и пароль')
+        document.querySelector('.registration').style.display = 'none';
+        document.querySelector('.password').style.display = 'none';
+        document.querySelector('.users__base').style.display = 'none';
+        document.querySelector('.to__do').style.display = 'flex';
     }
     else {
         alert('Неправильный логин или пароль')
@@ -73,7 +76,6 @@ btnUsers.addEventListener('click', () => {
 })
 
 //вернуться назад к проверке данных пользователя
-
 const btnBack2 = document.querySelector('#btnBack2');
 
 btnBack2.addEventListener('click', () => {
@@ -81,6 +83,10 @@ btnBack2.addEventListener('click', () => {
     document.querySelector('.password').style.display = 'flex';
     document.querySelector('.users__base').style.display = 'none';
 })
+
+
+
+
 
 
 
