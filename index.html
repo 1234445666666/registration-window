@@ -32,9 +32,28 @@
     </div>
     <div class="users__base" style="display: none">
       <h1>Пользователи и их пароли</h1>
-      <ol id="users__list">
-        <!-- <li>логины и пароли пользователей</li> -->
-      </ol>
+      <div class="buttons">
+        <button class="list__btn" style="display: none">список</button>
+        <button class="table__btn">таблица</button>
+      </div>
+      <div id="users__base__list">
+        <ol id="users__list">
+          <!-- <li>логины и пароли пользователей</li> -->
+        </ol>
+      </div>
+      <div id="users__base__table" style="display: none">
+        <table border="1">
+          <tr>
+            <th>Логин</th>
+            <th>Пароль</th>
+          </tr>
+          <!-- <tr>
+            <td>логин пользователя</td>
+            <td>пароль пользователя</td>
+          </tr> -->
+        </table>
+      </div>
+
       <button id="btnBack2">Вернуться назад</button>
     </div>
     <div class="to__do" style="display: none">
