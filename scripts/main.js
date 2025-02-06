@@ -86,6 +86,7 @@ const listBtn = document.querySelector(".list__btn");
 const tableBtn = document.querySelector(".table__btn");
 
 tableBtn.addEventListener("click", () => {
+//скрытие списка
   document.querySelector("#users__base__list").style.display = "none";
   document.querySelector("#users__base__table").style.display = "flex";
   userLogin.style.display = "none";
@@ -96,6 +97,7 @@ tableBtn.addEventListener("click", () => {
   document.querySelector("#users__base__table").append(userLogin, userPassword);
 
   const table = document.querySelector("table");
+  //проверка была ли добавлена строка
   if (table.childElementCount === 1) {
     const tr = document.createElement("tr");
     const th = document.createElement("th");
@@ -107,7 +109,6 @@ tableBtn.addEventListener("click", () => {
   } else {
     const th = tr.querySelector("th");
     const td = tr.querySelector("td");
-
     th.textContent = userOpenLogin.value;
     td.textContent = userOpenPassword.value;
   }
