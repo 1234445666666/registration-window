@@ -6,39 +6,59 @@ const addToDo = document.querySelector("#add__to__do");
 const removeAll = document.querySelector("#remove__all__to__do");
 
 addToDo.addEventListener("click", () => {
-  if (toDoInput.value !== "") {
-    createTodoItem(toDoInput.value);
+  if (toDoInput.value.trim !== "") {
+    createTodoItem(toDoInput.value.trim());
     toDoInput.value = "";
   } else {
-      alert("Введите задачу");
-    }
+    alert("Введите задачу");
+  }
 });
 
-// addToDo.addEventListener("click", () => {
-//   if (toDoInput.value !== "") {
-//     createTodoItem(toDoInput.value.trim());
-//     toDoInput.value = "";
-//   } else {
-//       alert("Введите задачу");
-//     }
-// });
-
 //функция создания задач,выполнение и удаление
-createTodoItem =(text) => {
+// createTodoItem =(text) => {
+//   const todoItem = document.createElement("li");
+//   todoItem.className = "to__do__list__item";
+
+//   const iconDone = document.createElement("span");
+//   iconDone.className = "icon icon__done";
+
+//   const taskText = document.createElement("span");
+//   taskText.textContent = text;
+
+//   const iconDelete = document.createElement("span");
+//   iconDelete.className = "icon icon__delete";
+
+//   todoItem.append(iconDone, taskText, iconDelete);
+//   toDoList.append(todoItem);
+
+//   iconDone.addEventListener("click", () => {
+//     todoItem.classList.toggle("complete");
+//   });
+
+//   iconDelete.addEventListener("click", () => {
+//     toDoList.removeChild(todoItem);
+//     counterTODO.textContent = toDoList.childElementCount;
+//   });
+// }
+
+
+createTodoItem = (text) => {
   const todoItem = document.createElement("li");
   todoItem.className = "to__do__list__item";
 
-  const iconDone = document.createElement("span");
-  iconDone.className = "icon icon__done";
+  todoItem.insertAdjacentHTML(
+    'beforeend',
+    `
+      <span class="icon icon__done"></span>
+      <span>${text}</span>
+      <span class="icon icon__delete"></span>
+    `
+  );
 
-  const taskText = document.createElement("span");
-  taskText.textContent = text;
+  const iconDone = todoItem.querySelector(".icon__done");
+  const iconDelete = todoItem.querySelector(".icon__delete");
 
-  const iconDelete = document.createElement("span");
-  iconDelete.className = "icon icon__delete";
-
-  todoItem.append(iconDone, taskText, iconDelete);
-  toDoList.append(todoItem);
+  toDoList.appendChild(todoItem);
 
   iconDone.addEventListener("click", () => {
     todoItem.classList.toggle("complete");
@@ -46,13 +66,8 @@ createTodoItem =(text) => {
 
   iconDelete.addEventListener("click", () => {
     toDoList.removeChild(todoItem);
-    counterTODO.textContent = toDoList.childElementCount;
-  });
-}
-
-removeAll.addEventListener("click", () => {
-  toDoList.innerHTML = "";
-});
+   counterTODO.textContent = toDoList.childElementCount;
+})};
 
 //счетчик задач
 const counterTODO = document.querySelector("#counter");
@@ -65,7 +80,6 @@ removeAll.addEventListener("click", () => {
   counterTODO.textContent = toDoList.childElementCount;
 });
 
-
 //возвращение назад
 const btnBack3 = document.querySelector("#btnBack3");
 
@@ -75,4 +89,3 @@ btnBack3.addEventListener("click", () => {
   document.querySelector(".users__base").style.display = "none";
   document.querySelector(".to__do").style.display = "none";
 });
-
