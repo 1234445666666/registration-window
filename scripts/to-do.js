@@ -14,9 +14,18 @@ addToDo.addEventListener("click", () => {
     }
 });
 
+// addToDo.addEventListener("click", () => {
+//   if (toDoInput.value !== "") {
+//     createTodoItem(toDoInput.value.trim());
+//     toDoInput.value = "";
+//   } else {
+//       alert("Введите задачу");
+//     }
+// });
+
 //функция создания задач,выполнение и удаление
 createTodoItem =(text) => {
-  const todoItem = document.createElement("div");
+  const todoItem = document.createElement("li");
   todoItem.className = "to__do__list__item";
 
   const iconDone = document.createElement("span");
