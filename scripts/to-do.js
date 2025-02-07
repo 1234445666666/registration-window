@@ -15,39 +15,12 @@ addToDo.addEventListener("click", () => {
 });
 
 //функция создания задач,выполнение и удаление
-// createTodoItem =(text) => {
-//   const todoItem = document.createElement("li");
-//   todoItem.className = "to__do__list__item";
-
-//   const iconDone = document.createElement("span");
-//   iconDone.className = "icon icon__done";
-
-//   const taskText = document.createElement("span");
-//   taskText.textContent = text;
-
-//   const iconDelete = document.createElement("span");
-//   iconDelete.className = "icon icon__delete";
-
-//   todoItem.append(iconDone, taskText, iconDelete);
-//   toDoList.append(todoItem);
-
-//   iconDone.addEventListener("click", () => {
-//     todoItem.classList.toggle("complete");
-//   });
-
-//   iconDelete.addEventListener("click", () => {
-//     toDoList.removeChild(todoItem);
-//     counterTODO.textContent = toDoList.childElementCount;
-//   });
-// }
-
-
 createTodoItem = (text) => {
   const todoItem = document.createElement("li");
   todoItem.className = "to__do__list__item";
 
   todoItem.insertAdjacentHTML(
-    'beforeend',
+    "beforeend",
     `
       <span class="icon icon__done"></span>
       <span>${text}</span>
@@ -66,8 +39,9 @@ createTodoItem = (text) => {
 
   iconDelete.addEventListener("click", () => {
     toDoList.removeChild(todoItem);
-   counterTODO.textContent = toDoList.childElementCount;
-})};
+    counterTODO.textContent = toDoList.childElementCount;
+  });
+};
 
 //счетчик задач
 const counterTODO = document.querySelector("#counter");
