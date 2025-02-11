@@ -107,10 +107,13 @@ tableBtn.addEventListener("click", () => {
     tr.append(th, td);
     table.append(tr);
   } else {
-    const th = tr.querySelector("th");
-    const td = tr.querySelector("td");
-    th.textContent = userOpenLogin.value;
-    td.textContent = userOpenPassword.value;
+    for (let row of table.rows) {
+      if (row.cells[0].textContent === "") {
+        row.cells[0].textContent = userOpenLogin.value;
+        row.cells[1].textContent = userOpenPassword.value;
+        break;
+      }
+    }
   }
 });
 

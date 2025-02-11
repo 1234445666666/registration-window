@@ -34,7 +34,7 @@ createTodoItem = (text) => {
   toDoList.appendChild(todoItem);
 
   iconDone.addEventListener("click", () => {
-    todoItem.classList.toggle("complete");
+    todoItem.classList.toggle("complete");``
   });
 
   iconDelete.addEventListener("click", () => {
@@ -51,6 +51,7 @@ addToDo.addEventListener("click", () => {
 });
 
 removeAll.addEventListener("click", () => {
+  toDoList.innerHTML = "";
   counterTODO.textContent = toDoList.childElementCount;
 });
 
